@@ -1,0 +1,29 @@
+RewriteEngine on
+RewriteBase /lms_bbl
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+
+
+#CSP for ** should add in .htaccess not in httpd.conf"
+
+#Header set Content-Security-Policy "default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; "
+
+
+#ErrorDocument 500 "The server made a boo boo."
+#SetEnv CI_ENV production
+#<IfModule mod_rewrite.c>
+        # BASIC RULES
+        #RewriteCond %{HTTPS} off 
+        #RewriteCond %{REQUEST_METHOD} !^(GET|POST)
+        #RewriteRule .* - [R=405,L]
+       # Order allow,deny
+        #Allow from all
+        # other method off
+         #<LimitExcept POST GET>
+             #      Deny from all
+         #</LimitExcept>
+#</IfModule>
+
+Options -Indexes

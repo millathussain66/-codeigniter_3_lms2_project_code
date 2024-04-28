@@ -1,0 +1,47 @@
+[1: unixodbc:]
+cd ~
+curl -O "ftp://ftp.unixodbc.org/pub/unixODBC/unixODBC-2.3.9.tar.gz"
+
+tar -xz -f unixODBC-2.3.9.tar.gz
+
+yum install gcc  [ yum remove gcc  hosain]
+cd unixODBC-2.3.9
+./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE --enable-stats=no
+
+make
+
+make install
+
+cd /usr/lib64/
+ln -s libodbccr.so.2 libodbccr.so.1  
+ln -s libodbcinst.so.2 libodbcinst.so.1  
+ln -s libodbc.so.2 libodbc.so.1   
+
+
+odbc_config --version --longodbcversion --cflags --ulen --libs --odbcinstini --odbcini
+
+odbcinst -j
+
+isql --version
+
+[2: msodbcsql17.4X:]
+cd ~
+curl -O "https://packages.microsoft.com/rhel/8/prod/msodbcsql17-17.4.1.1-1.x86_64.rpm"
+rpm -ivh msodbcsql17-17.4.1.1-1.x86_64.rpm
+ 
+dltest /opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.8.so.1.1 SQLGetInstalledDrivers
+SUCCESS: Loaded /opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.4.so.1.1
+SUCCESS: Found SQLGetInstalledDrivers
+
+[2: lampp pecl .4X:]
+sudo update-alternatives --set php /opt/lampp/bin/php-7.3.4
+sudo update-alternatives --set php /opt/lampp/bin/phpize7.3.4
+sudo update-alternatives --set php /opt/lampp/bin/phpize7.3.4
+sudo update-alternatives --set php /opt/lampp/bin/php-config-7.3.4
+sudo update-alternatives --set php /opt/lampp/bin/phpize
+sudo /opt/lampp/bin/pecl -d php_suffix=7.3.4 install sqlsrv-5.9.0[optional]
+sudo /opt/lampp/bin/pecl -d install sqlsrv-5.9.0 [optional]
+sudo /opt/lampp/bin/pecl  install sqlsrv-5.9.0
+
+
+

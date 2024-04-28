@@ -1,0 +1,35 @@
+div#menubar{font-size: 69.5%; font-family:Arial, Helvetica, sans-serif }
+	
+.ui-menubar { list-style: none; margin: 0; padding-left: 200; }
+
+.ui-menubar-item { float: left; }
+
+.ui-menubar .ui-button { float: left; font-weight: normal; border-top-width: 0 !important; border-bottom-width: 0 !important; margin: 0; outline: none; }
+.ui-menubar .ui-menubar-link { border-right: 1px dashed transparent; border-left: 1px dashed transparent; }
+
+.ui-menubar .ui-menu { width: 200px; position: absolute; z-index: 9999; font-weight: normal; }
+
+
+
+
+
+/* Experimental: Global focus styles */
+
+.ui-state-focus, .ui-state-focus .ui-button-icon-primary, a.ui-global-focus, input.ui-global-focus, div.ui-global-focus, select.ui-global-focus, button.ui-global-focus {
+	outline: 2px solid #412C84 !important;
+    outline-offset: 0;
+    -moz-outline-radius: 5px;
+}
+
+.ui-state-focus .ui-button-icon-primary {
+	outline-offset: .4em;
+}
+
+.ui-button-icon-only.ui-state-focus, .ui-tabs-nav a.ui-global-focus {
+	outline: none !important;
+}
+
+/* End global focus styles */
+ .clear {
+ 	clear:both;
+ }

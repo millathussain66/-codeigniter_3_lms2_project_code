@@ -1,0 +1,156 @@
+	::selection{ background-color: #E13300; color: white; }
+	::moz-selection{ background-color: #E13300; color: white; }
+	::webkit-selection{ background-color: #E13300; color: white; }
+
+	html, body {
+		background-color: #fff;
+		margin: 0;
+    	padding: 0;
+		font: 16px normal Helvetica, Calibri, sans-serif;
+		color: #4F5155;
+		height: 100%;
+	}
+
+	#header a{
+		color:#062A78;
+	}
+	#header a:hover{
+		color:black;
+	}
+	a {
+		color: #003399;
+		background-color: transparent;
+		font-weight: normal;
+	}
+
+	h1 {
+		color: #444;
+		background-color: transparent;
+		border-bottom: 0px solid #D0D0D0;
+		font-size: 19px;
+		font-weight: normal;
+		margin: 0 0 2px 0;
+		padding: 5px 15px 5px 15px;
+	}
+	#body{
+		margin:10px;
+	}
+	#header{
+		text-align:center;
+		background-color:#F4F0EC;
+		color:#FFFFFF;
+		font-weight:bold;
+		border-bottom: 0px solid #666666;
+		font-size: 13px;
+		font-weight: normal;
+		margin: 0 0 0px 0;
+		/*line-height: 70px;	*/
+	}
+	#error{
+		text-align:center;
+		border: 1px solid #96A628;
+		background-color: #DAE492;
+		font-size: 15px;
+		font-weight: normal;
+
+	}
+	#container{
+		margin: 10px;
+		border: 1px solid #D0D0D0;
+		-webkit-box-shadow: 0 0 8px #D0D0D0;
+
+	}
+
+	/* menu */
+	div#menu {
+		margin:5px;
+		clear:both;
+		height:50px;
+	}
+	#menu ul
+	{
+		background-color: transparent;
+		border: medium none;
+		left: 100%;
+		margin: 0;
+		overflow: hidden;
+		padding: 2px;
+		right: 0;
+		list-style-type: none;
+		/*margin: 0px;
+		padding: 0px;
+		*/
+	}
+
+	#menu a
+	{
+		background-color: #1cad4a !important;
+		border-radius: 5px !important;
+		color: #fff !important;
+		margin: 1px 12px 0 1px !important;
+		padding: 10px !important;		
+		display: block;
+		/*min-width:7em;*/
+		text-decoration: none;
+		text-align: center;
+		font-weight:bold;
+	}
+	#menu li
+	{
+		float: left;
+		margin-right: 0.5em;
+	}
+	#menu a#selected
+	{
+		background-color: blue !important;
+		font-weight: bolder;
+	}
+
+	#wrapper
+	{
+    	height: auto !important;
+    	min-height: 100%;
+    	height: 100%;
+    	position: relative; /* Required to absolutely position the footer */
+	}
+	#contet {
+		padding-bottom: 40px; /* This should match the height of the footer */
+	}
+
+	/*footer */
+	#footer {
+		/*height: 40px; 
+		position: relative;
+		bottom: 0; 
+		left: 0;
+		width: 100%; 
+		background-color: #F89B16;
+		color:#FFFFFF;*/
+		background-color: #9abce7;
+		bottom: 0;
+		color: #000000;
+		height: 40px;
+		left: 0;
+		position: fixed;
+		width: 100%;
+	}
+	p.footer{
+		font-size: 11px;
+		border-top: 1px solid  #666666;
+		line-height: 32px;
+		padding: 0 10px 0 10px;
+		margin: 0px 0 0 0;
+	}
+
+	.form
+	{
+		font-size: 16px;
+		font-family: Calibri;
+		width: 1000px;
+	}
+
+	#content
+	{
+		clear:both;
+		/*min-height:546px;*/
+	}
